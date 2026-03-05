@@ -62,7 +62,7 @@ get_vpn_info() {
         return
     fi
 
-    for iface in wg0 wg1 proton0 mullvad0 slazservoff1; do
+    for iface in wg0 wg1 proton0 mullvad0 customvpn; do
         local wg_ip=$(ip addr show "$iface" 2>/dev/null | grep 'inet ' | awk '{print $2}' | cut -d/ -f1)
         if [[ -n "$wg_ip" ]]; then
             local pub_ip=$(curl -4 -s --max-time 2 ifconfig.me)
