@@ -31,6 +31,7 @@ setopt appendhistory sharehistory hist_ignore_dups
 # ── Complétion ──
 autoload -Uz compinit && compinit
 zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 
 # ── Autosuggestions ──
 if [[ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
