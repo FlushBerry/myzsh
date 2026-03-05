@@ -28,6 +28,39 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory sharehistory hist_ignore_dups
 
+# ── Keybindings ──
+bindkey -e
+
+bindkey '^A'      beginning-of-line          # Ctrl+A  → début de ligne
+bindkey '^E'      end-of-line                # Ctrl+E  → fin de ligne
+bindkey '^U'      backward-kill-line         # Ctrl+U  → suppr jusqu'au début
+bindkey '^K'      kill-line                  # Ctrl+K  → suppr jusqu'à la fin
+bindkey '^W'      backward-kill-word         # Ctrl+W  → suppr mot précédent
+bindkey '^Y'      yank                       # Ctrl+Y  → coller
+bindkey '^R'      history-incremental-search-backward  # Ctrl+R → recherche historique
+bindkey '^S'      history-incremental-search-forward   # Ctrl+S → recherche avant
+bindkey '^L'      clear-screen               # Ctrl+L  → clear
+bindkey '^D'      delete-char-or-list        # Ctrl+D  → suppr char / logout
+
+bindkey '^[[1;5C' forward-word               # Ctrl+Droite → mot suivant
+bindkey '^[[1;5D' backward-word              # Ctrl+Gauche → mot précédent
+bindkey '^[f'     forward-word               # Alt+F   → mot suivant
+bindkey '^[b'     backward-word              # Alt+B   → mot précédent
+
+bindkey '^[[H'    beginning-of-line          # Home
+bindkey '^[[F'    end-of-line                # End
+bindkey '^[[3~'   delete-char                # Suppr
+bindkey '^[[2~'   overwrite-mode             # Insert
+
+bindkey '^[[A'    up-line-or-history         # Flèche haut  → historique
+bindkey '^[[B'    down-line-or-history       # Flèche bas   → historique
+
+bindkey '^[[1;3C' forward-word               # Alt+Droite → mot suivant
+bindkey '^[[1;3D' backward-word              # Alt+Gauche → mot précédent
+
+bindkey '^[d'     kill-word                  # Alt+D   → suppr mot suivant
+bindkey '^[^?'    backward-kill-word         # Alt+Backspace → suppr mot précédent
+
 # ── Complétion ──
 autoload -Uz compinit && compinit
 zstyle ':completion:*' menu select
