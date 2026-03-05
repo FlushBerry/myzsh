@@ -20,7 +20,7 @@ Un prompt ZSH personnalisé avec détection automatique VPN, environnement virtu
 
 - 🎨 **Thème root/user** — Contours rouges pour root, bleus pour utilisateur
 - 🔒 **Détection VPN automatique** — OpenVPN (tun0) et WireGuard (wg0, wg1, proton0, mullvad0, customvpn)
-- 🐍 **Détection venv Python** — Affiché proprement dans le prompt (sans doublon)
+- 🐍 **Détection venv Python** — Affiché proprement dans le prompt
 - 📅 **Date et heure** — Affichées en temps réel à chaque commande
 - 💡 **Autosuggestions** — Suggestions basées sur l'historique (grisé)
 - 🌈 **Syntax highlighting** — Coloration des commandes en temps réel
