@@ -58,13 +58,15 @@ autoload -Uz compinit && compinit
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 
-# ── Couleur bordure selon user ──
+# ── Couleurs selon user ──
 if [[ $EUID -eq 0 ]]; then
-    _BORDER_COLOR='%F{196}'
-    _USER_COLOR='%F{196}'
+    _BORDER_COLOR='%F{81}'
+    _USER_COLOR='%F{red}'
+    _PROMPT_CHAR='#'
 else
     _BORDER_COLOR='%F{81}'
-    _USER_COLOR='%F{green}'
+    _USER_COLOR='%F{39}'
+    _PROMPT_CHAR='$'
 fi
 
 # ── VPN ──
@@ -118,8 +120,8 @@ precmd() {
 }
 
 # ── Prompt ──
-PROMPT='${_BORDER_COLOR}╔═[${_USER_COLOR}%n${_BORDER_COLOR}@${_USER_COLOR}%m${_BORDER_COLOR}]─[%F{white}${_CMD_TIME}${_BORDER_COLOR}]─[%B%F{white}%~%b${_BORDER_COLOR}]
-${_VPN_LINE}${_VENV_LINE}${_BORDER_COLOR}╚═#%f '
+PROMPT='${_BORDER_COLOR}╔═[${_USER_COLOR}%n${_BORDER_COLOR}@${_USER_COLOR}%m${_BORDER_COLOR}]─[%F{119}${_CMD_TIME}${_BORDER_COLOR}]─[%B%F{white}%~%b${_BORDER_COLOR}]
+${_VPN_LINE}${_VENV_LINE}${_BORDER_COLOR}╚═${_PROMPT_CHAR}%f '
 
 # ── Plugins ──
 [[ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
