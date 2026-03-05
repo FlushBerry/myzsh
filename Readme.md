@@ -29,8 +29,8 @@ Un prompt ZSH personnalisé avec détection automatique VPN, environnement virtu
 ## 🚀 Installation
 
 ```bash
-git clone https://github.com/VOTRE_USER/zsh-prompt-custom.git
-cd zsh-prompt-custom
+git clone https://github.com/FlushBerry/myzsh.git
+cd myzsh
 chmod +x install_zshrc.sh
 sudo ./install_zshrc.sh
 ```
