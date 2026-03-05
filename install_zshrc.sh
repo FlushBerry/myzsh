@@ -60,8 +60,8 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 
 # ── Couleurs selon user ──
 if [[ $EUID -eq 0 ]]; then
-    _BORDER_COLOR='%F{81}'
-    _USER_COLOR='%F{red}'
+    _BORDER_COLOR='%F{124}'
+    _USER_COLOR='%F{196}'
     _PROMPT_CHAR='#'
 else
     _BORDER_COLOR='%F{81}'
